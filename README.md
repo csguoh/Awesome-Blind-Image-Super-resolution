@@ -1,8 +1,10 @@
 # Awesome-Blind-Image-Super-resolution
 
-This repository collects recent work on blind image super-resolution, including zero-shot SR, classic blind image SR and real-SR. Feel free to pose issues if there is missing work.
+This repository collects recent work on blind image super-resolution, including zero-shot SR, classic blind image SR and real-SR. 
 
-## classic blind image SR
+Feel free to pose issues if there is any missing work ;)
+
+## Classic blind image SR
 
 [TPAMI]Blind Image Super-Resolution: A Survey and Beyond
 
@@ -10,7 +12,14 @@ This repository collects recent work on blind image super-resolution, including 
 
 [ICCV2023]Learning Correction Filter via Degradation-Adaptive Regression for Blind Single Image Super-Resolution
 
-## zero-shot/few-shot SR
+## Zero-shot/Few-shot SR
+
+> Zero-shot SR tasks train a specific SR model for each LR input, which is degraded by unknow corruption. 
+Therefore, these methods perform train and test with every single image,i.e., batchsize is always 1.
+There are not training-tesing splits as classic ML setting, but only one type datasets which is used for both trainnig and testing.
+Some commonly used datasets including DIV2KRK, NTIRE2017, NTIRE2018. And the RealSR dataset is usually adopted for visually comparison.
+Some representatives includs ZSSR and KernerGAN. Following are some related works in recent years.
+
 
 [CVPR2018]Zero-Shot Super-Resolution Using Deep Internal Learning
 
@@ -28,7 +37,13 @@ This repository collects recent work on blind image super-resolution, including 
 
 [NeurIPS2023]Efficient Test-Time Adaptation for Super-Resolution with Second-Order Degradation and Reconstruction
 
-## real-SR
+## Real-SR
+
+> Real-SR, as a incresingly popular research topic in recent years, aiming to deal with LR image which is corrupted by real-world degradations.
+There are explicit train-test spilt in the Real-SR task. Some recent works usually use DIV2K, Flickr2K and OST datasets for training. The testing datasets 
+usually uses the validation set from DIV2K (100 images), and use three different levels of degradation to genrerate differnet real-world LR images. 
+Following are some recent works.  
+
 
 [ICCV2019]Toward Real-World Single Image Super-Resolution: A New Benchmark and a New Model
 
